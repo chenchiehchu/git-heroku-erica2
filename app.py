@@ -146,6 +146,9 @@ def aqi_chart_24h():
     plt.grid()
     plt.savefig('img.png')
     plt.close()
+    plt.xlabel('time')
+    plt.ylabel('aqi')
+
     return send_file('img.png', mimetype='image/png')
 
 #####################
