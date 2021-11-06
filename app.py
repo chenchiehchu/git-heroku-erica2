@@ -138,16 +138,16 @@ def aqi_chart_24h():
     data = resultProxy.fetchall()
 
     aqi_list = list()
+    time_list = list()
     for item in data:
         aqi_list.append( float(item['aqi']) )
-
+        time_list.append(item['time'])
     # plot
-    plt.plot(time,aqi_list)
+    plt.plot(time_list,aqi_list)
     plt.grid()
     plt.savefig('img.png')
     plt.close()
-    plt.xlabel('time', fontproperties = font)
-    plt.ylabel('aqi', fontproperties = font)
+ 
 
     return send_file('img.png', mimetype='image/png')
 
