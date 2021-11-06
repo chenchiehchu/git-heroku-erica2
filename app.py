@@ -120,7 +120,7 @@ def aqi_data_24h():
 #####################
 def job_wakeup():
     print('cron fun1: awake myself')
-    url = 'https://malo-cron2.herokuapp.com/'
+    url = 'https://git-heroku-erica.herokuapp.com/'
     r = requests.get(url)
     print(r)
 
